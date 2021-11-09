@@ -1,0 +1,13 @@
+{
+  "name": "rollup-tutorial",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "author": "GYUJEONG HWANG <octave08b@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "devDependencies": {
+    "rollup": "^2.59.0"
+  }
+}

@@ -8,6 +8,7 @@
     "build": "rollup --config"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "rollup": "^2.59.0"
   }
 }

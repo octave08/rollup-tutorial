@@ -5,11 +5,11 @@ export default {
   input: "src/main.js",
   output: [
     {
-      file: "./build/bundle.js",
+      file: "dist/bundle.js",
       format: "cjs",
     },
     {
-      file: "./build/bundle.min.js",
+      file: "dist/bundle.min.js",
       format: "iife",
       name: "version",
       plugins: [terser()],

@@ -9,7 +9,7 @@ const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const name = "RollupTypeScriptBabel";
 
 export default {
-  input: "src/app.ts",
+  input: "src/index.ts",
   output: [
     {
       file: "dist/bundle.js",

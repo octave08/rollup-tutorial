@@ -1,6 +1,5 @@
 import React from "react";
 import { Meta } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import styled from "@emotion/styled";
 
 import { Typography } from "./Typography";

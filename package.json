@@ -36,17 +36,21 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
+    "@svgr/rollup": "^5.5.0",
     "@types/react": "^17.0.34",
     "@types/styled-system": "^5.1.13",
     "babel-loader": "^8.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.59.0",
     "rollup-plugin-import-css": "^3.0.2",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-url": "^3.0.1",
     "styled-system": "^5.1.5",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "the-answer": "^1.0.0"

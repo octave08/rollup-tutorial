@@ -21,8 +21,12 @@ function getPackageDir(filepath) {
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  webpackFinal: async (config) =>
-    merge(config, {
+  webpackFinal: async (config) => {
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return merge(config, {
       resolve: {
         alias: {
           "@emotion/core": getPackageDir("@emotion/react"),
@@ -30,5 +34,6 @@ module.exports = {
           "emotion-theming": getPackageDir("@emotion/react"),
         },
       },
-    }),
+    })
+  }
 };

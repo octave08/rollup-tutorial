@@ -1,3 +1,7 @@
+import { ThemeProvider } from "@emotion/react";
+
+import { theme } from "../src/styles/theme";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +10,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];

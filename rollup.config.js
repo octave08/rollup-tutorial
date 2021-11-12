@@ -4,8 +4,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-import-css";
-import svgr from '@svgr/rollup';
-import url from 'rollup-plugin-url';
+import svgr from "@svgr/rollup";
+import url from "rollup-plugin-url";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
@@ -16,7 +16,7 @@ export default {
   output: [
     {
       file: "dist/bundle.js",
-      format: "cjs",
+      format: "es",
     },
     {
       file: "dist/bundle.min.js",
@@ -37,6 +37,6 @@ export default {
     }),
     css(),
     svgr(),
-    url()
+    url(),
   ],
 };

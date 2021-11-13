@@ -6,6 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-import-css";
 import svgr from "@svgr/rollup";
 import url from "rollup-plugin-url";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const name = "RollupTutorial"
@@ -41,5 +42,6 @@ export default {
     css(),
     svgr(),
     url(),
+    peerDepsExternal()
   ],
 };

@@ -6,22 +6,26 @@ import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-import-css";
 import svgr from "@svgr/rollup";
 import url from "rollup-plugin-url";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
-
-const name = "RollupTypeScriptBabel";
+const name = "RollupTutorial"
 
 export default {
   input: "src/index.ts",
   output: [
     {
       file: "dist/bundle.js",
+      format: "cjs",
+    },
+    {
+      file: "dist/bundle.es.js",
       format: "es",
     },
     {
       file: "dist/bundle.min.js",
       format: "iife",
-      name: "version",
+      name,
       plugins: [terser()],
     },
   ],
@@ -38,5 +42,6 @@ export default {
     css(),
     svgr(),
     url(),
+    peerDepsExternal()
   ],
 };

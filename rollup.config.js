@@ -8,20 +8,23 @@ import svgr from "@svgr/rollup";
 import url from "rollup-plugin-url";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
-
-const name = "RollupTypeScriptBabel";
+const name = "RollupTutorial"
 
 export default {
   input: "src/index.ts",
   output: [
     {
       file: "dist/bundle.js",
+      format: "cjs",
+    },
+    {
+      file: "dist/bundle.es.js",
       format: "es",
     },
     {
       file: "dist/bundle.min.js",
       format: "iife",
-      name: "version",
+      name,
       plugins: [terser()],
     },
   ],
